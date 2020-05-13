@@ -1,16 +1,32 @@
 import { createGlobalStyle } from "styled-components";
-import brandon from "../fonts/Brandon_reg.otf";
+import brandonReg from "../fonts/Brandon_reg.otf";
+import brandonMed from "../fonts/Brandon_med.otf";
+import brandonBold from "../fonts/Brandon_bld.otf";
 import urw from "../fonts/urw_din_reg.otf";
 
 export default createGlobalStyle`
  @font-face {
     font-family: 'brandon';
-    src: url(${brandon}) format('opentype');
-    font-weight: normal;
+    src: url(${brandonReg}) format('opentype');
+    font-weight: 400;
     font-style: normal;
   }
 
-   @font-face {
+  @font-face {
+    font-family: 'brandon-med';
+    src: url(${brandonMed}) format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'brandon-bold';
+    src: url(${brandonBold}) format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: 'urw';
     src: url(${urw}) format('opentype');
     font-weight: normal;
@@ -42,13 +58,17 @@ export default createGlobalStyle`
     margin: 0px auto;
   }
 
+  .flex-end{
+    justify-content: flex-end;
+  }
+
   /* GRID STYLES */
   [class^="col"] {
     float: left;
   }
 
   .col-33{
-    width: calc(100% / 3 - 1rem);
+    width: calc(100% / 3);
     @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
       width: 100%;
     }

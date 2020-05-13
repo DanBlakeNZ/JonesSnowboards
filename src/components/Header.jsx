@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
+import QuickCart from "./QuickCart";
 
 const buttonIconUrl =
   "https://res.cloudinary.com/dblakenzcloud/image/upload/v1586738414/Jones%20Snowboards/mobile-open-close.png";
@@ -8,6 +9,7 @@ const logoUrl =
 
 const StyledHeader = styled.header`
   position: fixed;
+  display: flex;
   top: 0;
   width: 100%;
   background-color: #000;
@@ -64,11 +66,6 @@ const Logo = styled.img`
   vertical-align: middle;
 `;
 
-const QuickMenu = styled.div`
-  width: 100%;
-  max-width: ${({ theme }) => theme.sizes.maxWidth};
-`;
-
 export const Header = () => {
   const [navOpen, toggleNav] = useState(false);
 
@@ -80,11 +77,7 @@ export const Header = () => {
           <Logo src={logoUrl} />
         </LogoLink>
       </NavOpen>
-      <QuickMenu className="center">
-        <div className="col-33 mobile-hide">ONE</div>
-        <div className="col-33 mobile-hide">TWO</div>
-        <div className="col-33">THREE</div>
-      </QuickMenu>
+      <QuickCart />
     </StyledHeader>
   );
 };
