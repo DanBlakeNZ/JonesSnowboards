@@ -13,7 +13,7 @@ const theme = {
     maxWidth: "1280px;",
   },
   colors: {
-    persianGreen: "#06B49A",
+    aqua: "#007799",
   },
   fontSizes: {
     small: "1rem",

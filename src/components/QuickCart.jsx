@@ -31,8 +31,15 @@ const CartItem = styled.div`
     text-transform: uppercase;
     font-family: "brandon-med", sans-serif;
     font-weight: 500;
+    :hover {
+      background: #fff;
+      color: ${({ theme }) => theme.colors.aqua};
+    }
     img {
       display: flex;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
+      color: #000;
     }
   }
   :after {
