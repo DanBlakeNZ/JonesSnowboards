@@ -6,28 +6,28 @@ import urw from "../fonts/urw_din_reg.otf";
 
 export default createGlobalStyle`
  @font-face {
-    font-family: 'brandon';
+    font-family: 'brandon', sans-serif;
     src: url(${brandonReg}) format('opentype');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'brandon-med';
+    font-family: 'brandon-med', sans-serif;
     src: url(${brandonMed}) format('opentype');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'brandon-bold';
+    font-family: 'brandon-bold', sans-serif;
     src: url(${brandonBold}) format('opentype');
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'urw';
+    font-family: 'urw', sans-serif;
     src: url(${urw}) format('opentype');
     font-weight: normal;
     font-style: normal;

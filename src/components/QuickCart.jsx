@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LocationSelect from "./LocationSelect";
 
 const flagAU = "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589327190/Jones%20Snowboards/flag_AU.png";
 
@@ -79,6 +80,7 @@ const QuickCart = () => {
         </CartItem>
         <CartItem>
           <a href="">EN</a>
+          <LocationSelect />
         </CartItem>
       </CartItemSection>
     </QuickMenu>
