@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import QuickCart from "./QuickCart";
-
-const buttonIconUrl =
-  "https://res.cloudinary.com/dblakenzcloud/image/upload/v1586738414/Jones%20Snowboards/mobile-open-close.png";
-const logoUrl =
-  "https://res.cloudinary.com/dblakenzcloud/image/upload/v1586740918/Jones%20Snowboards/jones_logo_150x30.png";
+import { logos, icons } from "../data/imageLinks.js";
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -36,7 +32,7 @@ const NavOpen = styled.div`
 const NavMenuToggle = styled.div`
   width: 5rem;
   height: 5rem;
-  background-image: url(${buttonIconUrl});
+  background-image: url(${icons.mobileOpenClose});
   background-position: 0 center;
   background-repeat: no-repeat;
   background-size: 10rem 5rem;
@@ -74,7 +70,7 @@ export const Header = () => {
       <NavOpen>
         <NavMenuToggle navOpen={navOpen} onClick={() => toggleNav(!navOpen)} />
         <LogoLink href={"/"}>
-          <Logo src={logoUrl} />
+          <Logo src={logos.jones150x30} />
         </LogoLink>
       </NavOpen>
       <QuickCart />
