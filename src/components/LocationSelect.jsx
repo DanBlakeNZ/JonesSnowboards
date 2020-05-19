@@ -35,8 +35,13 @@ const LocationSelect = () => {
       <h3>We Ship to</h3>
       <LocationBlock
         flag={location.unitedStates.flag}
-        text={location.unitedStates.name}
-        subText={"Free Shipping Over $75"}
+        locationName={location.unitedStates.name}
+        detailsText={location.unitedStates.details}
+      />
+      <LocationBlock
+        flag={location.canada.flag}
+        locationName={location.canada.name}
+        detailsText={location.canada.details}
       />
     </LocationSelectContainer>
   );

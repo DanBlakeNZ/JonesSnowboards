@@ -36,11 +36,13 @@ export default createGlobalStyle`
   * {
     box-sizing: border-box;
     outline: none;
-}
+    padding: 0;
+    margin: 0;
+  }
 
   html {
     font-size: 62.5% !important;
-}
+  }
 
   body{
     font-family: 'urw-din', sans-serif;
@@ -60,6 +62,16 @@ export default createGlobalStyle`
 
   .flex-end{
     justify-content: flex-end;
+  }
+
+  .border-light{
+    color: ${({ theme }) => theme.colors.borderGreyLight};;
+  }
+
+  .border-bottom{
+    line-height: 0;
+    min-height: 0;
+    border-bottom: 0.1rem solid;
   }
 
   /* GRID STYLES */

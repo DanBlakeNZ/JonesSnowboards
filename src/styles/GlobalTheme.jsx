@@ -14,7 +14,9 @@ const theme = {
   },
   colors: {
     aqua: "#007799",
+    grey: "#555555",
     lightGrey: "#f9f9f9",
+    borderGreyLight: "#eee",
   },
   fontSizes: {
     small: "1rem",
