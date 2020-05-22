@@ -12,8 +12,7 @@ export const flags = {
   newZealand: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589414260/Jones%20Snowboards/flag_NZ.png",
   spain: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589414260/Jones%20Snowboards/flag_SP.png",
   sweden: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589414260/Jones%20Snowboards/flag_SE.png",
-  switzerland:
-    "https://res.cloudinary.com/dblakendblakenzcloud/image/upload/v1589414260/Jones%20Snowboards/flag_CH.png",
+  switzerland: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589414260/Jones%20Snowboards/flag_CH.png",
   unitedKingdom: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589414261/Jones%20Snowboards/flag_UK.png",
   unitedStates: "https://res.cloudinary.com/dblakenzcloud/image/upload/v1589327190/Jones%20Snowboards/flag_US.png",
 };

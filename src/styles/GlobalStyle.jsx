@@ -74,6 +74,10 @@ export default createGlobalStyle`
     border-bottom: 0.1rem solid;
   }
 
+  .margin-top-1{
+    margin-top: 1rem;
+  }
+
   /* GRID STYLES */
   [class^="col"] {
     float: left;

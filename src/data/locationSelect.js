@@ -1,6 +1,6 @@
 import { flags } from "./imageLinks";
 
-const location = {
+export const locationStatic = {
   canada: {
     name: "Canada",
     flag: flags.canada,
@@ -13,4 +13,61 @@ const location = {
   },
 };
 
-export default location;
+export const locationList = [
+  {
+    name: "Global",
+    flag: flags.global,
+  },
+  {
+    name: "Switzerland | CHF",
+    flag: flags.switzerland,
+  },
+  {
+    name: "Germany | EUR",
+    flag: flags.germany,
+  },
+  {
+    name: "Italy | EUR",
+    flag: flags.italy,
+  },
+  {
+    name: "France | EUR",
+    flag: flags.france,
+  },
+  {
+    name: "Netherlands | EUR",
+    flag: flags.netherlands,
+  },
+  {
+    name: "Spain | EUR",
+    flag: flags.spain,
+  },
+  {
+    name: "Belgium | EUR",
+    flag: flags.belgium,
+  },
+  {
+    name: "Austria | EUR",
+    flag: flags.austria,
+  },
+  {
+    name: "Estonia | EUR",
+    flag: flags.estonia,
+  },
+  {
+    name: "United Kingdom | £",
+    flag: flags.unitedKingdom,
+  },
+  {
+    name: "Sweden | SEK",
+    flag: flags.sweden,
+  },
+  {
+    name: "Australia",
+    flag: flags.australia,
+  },
+  {
+    name: "New Zealand",
+    flag: flags.newZealand,
+  },
+];

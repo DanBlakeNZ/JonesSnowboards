@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import LocationBlock from "./LocationBlock";
-import location from "../data/locationSelect";
+import { locationStatic, locationList } from "../data/locationSelect";
 
 const LocationSelectContainer = styled.div`
   background: ${({ theme }) => theme.colors.lightGrey};
@@ -34,15 +34,19 @@ const LocationSelect = () => {
     <LocationSelectContainer>
       <h3>We Ship to</h3>
       <LocationBlock
-        flag={location.unitedStates.flag}
-        locationName={location.unitedStates.name}
-        detailsText={location.unitedStates.details}
+        flag={locationStatic.unitedStates.flag}
+        locationName={locationStatic.unitedStates.name}
+        detailsText={locationStatic.unitedStates.details}
       />
       <LocationBlock
-        flag={location.canada.flag}
-        locationName={location.canada.name}
-        detailsText={location.canada.details}
+        flag={locationStatic.canada.flag}
+        locationName={locationStatic.canada.name}
+        detailsText={locationStatic.canada.details}
       />
+      <h3 className="margin-top-1">Navigate in</h3>
+      {locationList.map((location, i) => (
+        <LocationBlock flag={location.flag} locationName={location.name} detailsText={location.details} key={i} />
+      ))}
     </LocationSelectContainer>
   );
 };

@@ -23,7 +23,7 @@ const CartItem = styled.div`
   a {
     height: 3rem;
     line-height: 3rem;
-    color: #fff;
+    color: #000;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
@@ -32,30 +32,42 @@ const CartItem = styled.div`
     text-transform: uppercase;
     font-family: "brandon-med", sans-serif;
     font-weight: 500;
+
     :hover {
-      background: #fff;
+      background: ${({ theme }) => theme.colors.lightGrey};
       color: ${({ theme }) => theme.colors.aqua};
+
+      @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+        background: #fff;
+      }
     }
+
     img {
       display: flex;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-      color: #000;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+      color: #fff;
     }
   }
-  :after {
-    content: "";
-    right: 0;
-    height: 1rem;
-    line-height: 3rem;
-    width: 0.1rem;
-    background-color: #666;
-    vertical-align: middle;
-  }
-  :last-child:after {
-    display: none;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    :after {
+      content: "";
+      right: 0;
+      height: 1rem;
+      line-height: 3rem;
+      width: 0.1rem;
+      background-color: #666;
+      vertical-align: middle;
+    }
+    :last-child:after {
+      display: none;
+    }
   }
 `;
+
+let showLocation = false;
 
 const QuickCart = () => {
   return (
@@ -73,14 +85,14 @@ const QuickCart = () => {
       </CartItemSection>
       <CartItemSection className="col-33 mobile-hide">TWO</CartItemSection>
       <CartItemSection className="col-33 flex-end">
-        <CartItem>
+        <CartItem onMouseOver={() => (showLocation = true)}>
           <a href="">
             <img src={flagAU} />
           </a>
+          {showLocation && <LocationSelect />}
         </CartItem>
         <CartItem>
           <a href="">EN</a>
-          <LocationSelect />
         </CartItem>
       </CartItemSection>
     </QuickMenu>
