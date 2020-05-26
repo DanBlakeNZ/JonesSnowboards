@@ -11,7 +11,7 @@ const LocationSelectContainer = styled.div`
   width: 30rem;
   height: 28rem;
   padding: 3rem;
-  overflow: scroll;
+  overflow-y: scroll;
   transition: transform 200ms ease;
 
   h3 {

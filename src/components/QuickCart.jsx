@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import LocationSelect from "./LocationSelect";
 
@@ -7,8 +7,12 @@ const flagAU = "https://res.cloudinary.com/dblakenzcloud/image/upload/v158932719
 const QuickMenu = styled.div`
   display: flex;
   flex-direction: row;
+  height: 5rem;
   width: 100%;
   max-width: ${({ theme }) => theme.sizes.maxWidth};
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    height: 3rem;
+  }
 `;
 
 const CartItemSection = styled.div`
@@ -67,9 +71,9 @@ const CartItem = styled.div`
   }
 `;
 
-let showLocation = false;
-
 const QuickCart = () => {
+  const [isLocationMenuOpen, setIsLocationOpen] = useState(false);
+
   return (
     <QuickMenu className="center">
       <CartItemSection className="col-33 mobile-hide">
@@ -85,11 +89,11 @@ const QuickCart = () => {
       </CartItemSection>
       <CartItemSection className="col-33 mobile-hide">TWO</CartItemSection>
       <CartItemSection className="col-33 flex-end">
-        <CartItem onMouseOver={() => (showLocation = true)}>
-          <a href="">
+        <CartItem onMouseOver={() => setIsLocationOpen(true)} onMouseLeave={() => setIsLocationOpen(false)}>
+          <a>
             <img src={flagAU} />
           </a>
-          {showLocation && <LocationSelect />}
+          {isLocationMenuOpen && <LocationSelect />}
         </CartItem>
         <CartItem>
           <a href="">EN</a>
