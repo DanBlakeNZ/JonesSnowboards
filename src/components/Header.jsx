@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import QuickCart from "./QuickCart";
 import { logos, icons } from "../data/imageLinks.js";
@@ -62,13 +62,11 @@ const Logo = styled.img`
   vertical-align: middle;
 `;
 
-export const Header = () => {
-  const [navOpen, toggleNav] = useState(false);
-
+export const Header = (props) => {
   return (
     <StyledHeader>
       <NavOpen>
-        <NavMenuToggle navOpen={navOpen} onClick={() => toggleNav(!navOpen)} />
+        <NavMenuToggle navOpen={props.mobileNavOpen} onClick={props.toggleMobileNav} />
         <LogoLink href={"/"}>
           <Logo src={logos.jones150x30} />
         </LogoLink>

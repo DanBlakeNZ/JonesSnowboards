@@ -65,7 +65,7 @@ export default createGlobalStyle`
   }
 
   .border-light{
-    color: ${({ theme }) => theme.colors.borderGreyLight};;
+    color: ${({ theme }) => theme.colors.borderGreyLight};
   }
 
   .border-bottom{
