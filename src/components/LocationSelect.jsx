@@ -6,11 +6,11 @@ import { locationStatic, locationList } from "../data/locationSelect";
 const LocationSelectContainer = styled.div`
   background: ${({ theme }) => theme.colors.lightGrey};
   position: absolute;
-  top: 3rem;
+  top: 5rem;
   right: 0;
   width: 30rem;
   height: 28rem;
-  padding: 3rem;
+  padding: 0 3rem;
   overflow-y: scroll;
   transition: transform 200ms ease;
 
@@ -21,11 +21,16 @@ const LocationSelectContainer = styled.div`
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: #000;
+    height: 4rem;
   }
 
   img,
   span {
     display: inline;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    top: 3rem;
   }
 `;
 

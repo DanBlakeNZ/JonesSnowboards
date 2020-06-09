@@ -10,6 +10,7 @@ const QuickMenu = styled.div`
   height: 5rem;
   width: 100%;
   max-width: ${({ theme }) => theme.sizes.maxWidth};
+
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
     height: 3rem;
   }
@@ -24,38 +25,40 @@ const CartItemSection = styled.div`
 const CartItem = styled.div`
   display: flex;
   align-items: center;
+
+  img {
+    display: flex;
+  }
+
   a {
-    height: 3rem;
-    line-height: 3rem;
+    height: 5rem;
+    line-height: 5rem;
     color: #000;
     font-size: 0.9rem;
     display: flex;
     align-items: center;
     padding: 0 1.15rem;
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
     font-family: "brandon-med", sans-serif;
     font-weight: 500;
 
     :hover {
       background: ${({ theme }) => theme.colors.lightGrey};
       color: ${({ theme }) => theme.colors.aqua};
-
-      @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-        background: #fff;
-      }
-    }
-
-    img {
-      display: flex;
-    }
-
-    @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
-      color: #fff;
     }
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    a {
+      color: #fff;
+      height: 3rem;
+      line-height: 3rem;
+      :hover {
+        background: #fff;
+        height: 3rem;
+      }
+    }
+
     :after {
       content: "";
       right: 0;
@@ -65,6 +68,7 @@ const CartItem = styled.div`
       background-color: #666;
       vertical-align: middle;
     }
+
     :last-child:after {
       display: none;
     }
@@ -92,8 +96,8 @@ const QuickCart = () => {
         <CartItem onMouseOver={() => setIsLocationOpen(true)} onMouseLeave={() => setIsLocationOpen(false)}>
           <a>
             <img src={flagAU} />
+            {isLocationMenuOpen && <LocationSelect />}
           </a>
-          {isLocationMenuOpen && <LocationSelect />}
         </CartItem>
         <CartItem>
           <a href="">EN</a>
