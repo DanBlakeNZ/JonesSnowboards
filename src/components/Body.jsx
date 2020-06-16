@@ -6,6 +6,8 @@ const BodyContainer = styled.div`
   width: 100%;
   display: block;
   border: 1px solid black;
+  /* font-family: "brandon", sans-serif; */
+  font-family: "brandon";
   transform: translateX(0);
   transition: transform 200ms ease;
   ${(props) =>
@@ -13,14 +15,14 @@ const BodyContainer = styled.div`
     css`
       transform: translateX(29rem);
     `};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    margin-top: 3rem;
+  }
 `;
 
 const Body = (props) => {
-  return (
-    <BodyContainer mobileNavOpen={props.mobileNavOpen}>
-      <p>BODY</p>
-    </BodyContainer>
-  );
+  return <BodyContainer mobileNavOpen={props.mobileNavOpen}>BODY</BodyContainer>;
 };
 
 export default Body;

@@ -6,7 +6,7 @@ import MobileNavMenu from "./MobileNavMenu";
 import Body from "./Body";
 
 export const App = () => {
-  const [mobileNavOpen, toggleMobileNav] = useState(false);
+  const [mobileNavOpen, toggleMobileNav] = useState(true);
 
   return (
     <GlobalTheme>

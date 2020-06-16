@@ -1,4 +1,7 @@
 const path = require("path");
+const PATHS = {
+  build: path.join(__dirname, "./public"),
+};
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
@@ -7,9 +10,9 @@ module.exports = (env) => {
     stats: "errors-only",
     entry: "./src/index.js",
     output: {
-      path: path.resolve(__dirname, "public"),
-      publicPath: "/",
+      path: PATHS.build,
       filename: "bundle.js",
+      publicPath: PATHS.build,
     },
     resolve: {
       extensions: [".js", ".jsx"],
@@ -29,15 +32,7 @@ module.exports = (env) => {
         },
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
-          use: [
-            {
-              loader: "file-loader",
-              options: {
-                name: "[name].[ext]",
-                outputPath: "fonts/",
-              },
-            },
-          ],
+          loader: "file-loader?name=/fonts/[name].[ext]",
         },
       ],
     },

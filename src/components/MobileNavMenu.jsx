@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import MobileNavMenuCategory from "./MobileNavMenuCategory";
+import menuItems from "../data/menuItems";
 
 const MobileNavWrapper = styled.nav`
   position: fixed;
@@ -26,7 +28,9 @@ const MobileNavWrapper = styled.nav`
 const MobileNavMenu = (props) => {
   return (
     <MobileNavWrapper mobileNavOpen={props.mobileNavOpen}>
-      <p>Mobile Nav</p>
+      {menuItems.map((category, i) => (
+        <MobileNavMenuCategory category={category} key={i} />
+      ))}
     </MobileNavWrapper>
   );
 };

@@ -1,16 +1,11 @@
 import { createGlobalStyle } from "styled-components";
-import brandonReg from "../fonts/Brandon_reg.otf";
-import brandonMed from "../fonts/Brandon_med.otf";
-import brandonBold from "../fonts/Brandon_bld.otf";
-import urw from "../fonts/urw_din_reg.otf";
+import brandonReg from "./fonts/Brandon_reg.otf";
+import brandonMed from "./fonts/Brandon_med.otf";
+import brandonBold from "./fonts/Brandon_bld.otf";
+import urw from "./fonts/urw_din_reg.otf";
 
 export default createGlobalStyle`
- @font-face {
-    font-family: 'brandon', sans-serif;
-    src: url(${brandonReg}) format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
+
 
   @font-face {
     font-family: 'brandon-med', sans-serif;
@@ -45,7 +40,7 @@ export default createGlobalStyle`
   }
 
   body{
-    font-family: 'urw-din', sans-serif;
+    /* font-family: 'urw-din', sans-serif; */
     font-size: 1.3rem;
   }
 

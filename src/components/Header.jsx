@@ -8,9 +8,9 @@ const StyledHeader = styled.header`
   display: flex;
   top: 0;
   width: 100%;
-  background-color: #000;
-  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    background-color: #fff;
+  background-color: #fff;
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    background-color: #000;
   }
 `;
 
@@ -22,10 +22,11 @@ const NavOpen = styled.div`
   position: absolute;
   display: none;
   pointer-events: auto;
+  display: block;
   cursor: pointer;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    display: block;
+  @media (min-width: ${({ theme }) => theme.breakpoints.large}) {
+    display: none;
   }
 `;
 
