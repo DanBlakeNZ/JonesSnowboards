@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const CategoryName = styled.span`
-  font-family: "brandon-med", sans-serif;
+  font-family: BrandonMedium, sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
   text-transform: uppercase;

@@ -7,7 +7,7 @@ const BodyContainer = styled.div`
   display: block;
   border: 1px solid black;
   /* font-family: "brandon", sans-serif; */
-  font-family: "brandon";
+  font-family: BrandonRegular;
   transform: translateX(0);
   transition: transform 200ms ease;
   ${(props) =>

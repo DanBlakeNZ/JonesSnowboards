@@ -39,7 +39,7 @@ const CartItem = styled.div`
     align-items: center;
     padding: 0 1.15rem;
     letter-spacing: 0.1rem;
-    font-family: "brandon-med", sans-serif;
+    font-family: BrandonMedium, sans-serif;
     font-weight: 500;
 
     :hover {

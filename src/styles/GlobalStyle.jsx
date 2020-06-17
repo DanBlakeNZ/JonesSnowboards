@@ -1,29 +1,37 @@
 import { createGlobalStyle } from "styled-components";
-import brandonReg from "./fonts/Brandon_reg.otf";
-import brandonMed from "./fonts/Brandon_med.otf";
-import brandonBold from "./fonts/Brandon_bld.otf";
-import urw from "./fonts/urw_din_reg.otf";
 
+// Import fonts added to be picked up and bundled by webpack
+import BrandonRegular from "./fonts/BrandonRegular.otf";
+import BrandonMedium from "./fonts/BrandonMedium.otf";
+import BrandonBold from "./fonts/BrandonBold.otf";
+import urw from "./fonts/UrwDinRegular.otf";
+
+// @font-face references fonts in public folder
 export default createGlobalStyle`
-
+  @font-face {
+    font-family: BrandonRegular;
+    src: url("/fonts/BrandonRegular.otf") format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
 
   @font-face {
-    font-family: 'brandon-med', sans-serif;
-    src: url(${brandonMed}) format('opentype');
+    font-family: BrandonMedium;
+    src: url("/fonts/BrandonMedium.otf") format('opentype');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'brandon-bold', sans-serif;
-    src: url(${brandonBold}) format('opentype');
+    font-family: BrandonBold;
+    src: url("/fonts/BrandonBold.otf") format('opentype');
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'urw', sans-serif;
-    src: url(${urw}) format('opentype');
+    font-family: urw;
+    src: url("/fonts/UrwDinRegular.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
   }
@@ -40,7 +48,7 @@ export default createGlobalStyle`
   }
 
   body{
-    /* font-family: 'urw-din', sans-serif; */
+    font-family: urw, sans-serif;
     font-size: 1.3rem;
   }
 

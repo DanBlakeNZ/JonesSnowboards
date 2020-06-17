@@ -23,7 +23,7 @@ const FlagLocationBlock = styled.div`
   p {
     padding-left: 1rem;
     font-size: 1.4rem;
-    font-family: "urw", sans-serif;
+    font-family: urw, sans-serif;
     font-weight: 400;
     letter-spacing: 0.05rem;
   }

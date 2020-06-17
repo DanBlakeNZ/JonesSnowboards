@@ -17,7 +17,7 @@ const LocationSelectContainer = styled.div`
   h3 {
     text-transform: uppercase;
     font-size: 1.1rem;
-    font-family: "urw", sans-serif;
+    font-family: urw, sans-serif;
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: #000;
