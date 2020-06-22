@@ -139,8 +139,12 @@ const menuItems = [
     categoryUrl: "",
     subcategories: [
       {
-        subcategoryName: "Ode to progression | Awards",
+        subcategoryName: "Base Camp",
         subcategoryItems: [
+          {
+            itemName: "Ode to progression | Awards",
+            itemLink: "",
+          },
           {
             itemName: "Jones Ride Report",
             itemLink: "",

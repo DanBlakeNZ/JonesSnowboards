@@ -41,6 +41,7 @@ export default createGlobalStyle`
     outline: none;
     padding: 0;
     margin: 0;
+    font-family: urw, sans-serif;
   }
 
   html {
