@@ -13,7 +13,6 @@ const MobileNavWrapper = styled.nav`
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
-  border: 1px solid hotpink;
   border-right: 0.1rem solid ${({ theme }) => theme.colors.borderGreyLight};
   border-bottom: 0.2rem solid ${({ theme }) => theme.colors.borderGreyLight};
   transition: transform 200ms ease;
