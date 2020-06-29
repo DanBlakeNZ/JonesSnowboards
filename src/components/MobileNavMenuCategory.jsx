@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Category = styled.div`
-  padding: 1rem 0 0rem 2rem;
+  padding: 1.3rem 0 0rem 2rem;
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.borderGreyLight};
 `;
 
@@ -11,7 +11,12 @@ const CategoryName = styled.div`
   font-weight: 500;
   font-size: 1.6rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
+  cursor: pointer;
+  :hover {
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.aqua};
+  }
 `;
 
 const SubcategoryContainer = styled.div`
@@ -36,7 +41,7 @@ const ItemName = styled.li`
   font-family: urw, sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  margin: 1rem 0 0 1rem;
+  margin: 1.3rem 0 0 1rem;
   list-style: none;
   cursor: pointer;
   :hover {
